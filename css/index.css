@@ -1,0 +1,43 @@
+body {
+  color: #444;
+  font-size: 24px;
+  font-family: Karla;
+  padding: 2em 4em;
+}
+
+.page {
+  max-width: 800px;
+}
+
+.row {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.col.span-1 {
+  flex: 1;
+}
+
+.col.span-2 {
+  flex: 2;
+}
+
+.col.span-3 {
+  flex: 3;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 0.5em 1em;
+  }
+  h1 {
+    font-size: 1.2em;
+  }
+  h2 {
+    font-size: 1.1em;
+  }
+  .col {
+    width: 100%;
+    flex: none !important;
+  }
+}
