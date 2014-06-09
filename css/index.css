@@ -7,6 +7,9 @@ body {
   background-size: 2000px;
   color: #e4e3df;
 }
+a {
+  color: inherit;
+}
 header {
   margin: 380px auto;
   width: 380px;
@@ -22,13 +25,22 @@ header h1 {
 }
 header p {
   line-height: 1;
+  margin: 0 0 40px 0;
+}
+.hello a {
+  font-size: 70%;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  display: inline-block;
+  border: 1px solid;
+  line-height: 20px;
+  padding: 0 10px;
+  border-radius: 10px;
 }
 .bg-credits {
   position: fixed;
   left: 1em;
   bottom: 1em;
   font-size: 60%;
-}
-.bg-credits a {
-  color: inherit;
 }
