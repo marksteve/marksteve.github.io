@@ -3,8 +3,8 @@ body {
   padding: 0;
   margin: 0;
   font: 20px/1.5 Source Sans Pro, sans-serif;
-  background: url(../img/coffee.jpg) fixed center -100px;
-  background-size: 2000px;
+  background: #1e0604 url(../img/coffee.jpg) no-repeat fixed center -100px;
+  background-size: 120%;
   color: #e4e3df;
 }
 a {
@@ -12,7 +12,7 @@ a {
   text-decoration: none;
 }
 header {
-  margin: 380px auto;
+  margin: 22% auto 0 auto;
   width: 380px;
   text-shadow: 10px 0 10px #31150a;
 }
