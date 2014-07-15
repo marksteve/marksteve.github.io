@@ -1,47 +1,19 @@
 body {
-  text-align: center;
-  padding: 0;
-  margin: 0;
-  font: 20px/1.5 Source Sans Pro, sans-serif;
-  background: #1e0604 url(../img/coffee.jpg) no-repeat fixed center -100px;
-  background-size: 120%;
-  color: #e4e3df;
+  font: 20px/1.5 'cooper_hewittmedium', sans-serif;
+  color: #333;
 }
+
+h1, h2, h3 {
+  font-family: 'cooper_hewittlight', sans-serif;
+  color: #999;
+}
+
 a {
   color: inherit;
-  text-decoration: none;
 }
-header {
-  margin: 22% auto 0 auto;
-  width: 380px;
-  text-shadow: 10px 0 10px #31150a;
-}
-header h1 {
-  font: 80px/0.6 Montserrat, sans-serif;
-  margin: 0 0 40px 0;
-  font-weight: bold;
-  letter-spacing: -0.12em;
-  text-align: center;
-  width: 100%;
-}
-header p {
-  line-height: 1;
-  margin: 0 0 40px 0;
-}
-.hello a {
-  font-size: 70%;
-  text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  display: inline-block;
-  border: 1px solid;
-  line-height: 20px;
-  padding: 0 10px;
-  border-radius: 10px;
-}
-.bg-credits {
-  position: fixed;
-  left: 1em;
-  bottom: 1em;
-  font-size: 60%;
+
+section {
+  width: 40em;
+  padding: 0 2em;
+  margin: 5em auto;
 }
