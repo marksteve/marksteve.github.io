@@ -21,7 +21,7 @@ a {
 }
 
 section {
-  min-width: 40em;
+  max-width: 40em;
   padding: 0 2em;
   margin: 5em auto;
 }
