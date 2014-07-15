@@ -1,0 +1,45 @@
+body {
+  font: 20px/1.5 'cooper_hewittmedium', sans-serif;
+  color: #333;
+}
+
+strong {
+  font-family: 'cooper_hewittsemibold', sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: 'cooper_hewittlight', sans-serif;
+  color: #999;
+}
+
+h1 a {
+  text-decoration: none;
+}
+
+a {
+  color: inherit;
+}
+
+section {
+  width: 40em;
+  padding: 0 2em;
+  margin: 5em auto;
+}
+
+.hackathons dt {
+  font-family: 'cooper_hewittsemibold', sans-serif;
+}
+
+.hackathons dd {
+  margin: 0 0 20px 0;
+}
+
+.hackathons ul {
+  list-style: none;
+  padding-left: 20px;
+}
+
+.hackathons ul,
+.hackathons h3 {
+  margin: 0;
+}
