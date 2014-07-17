@@ -13,6 +13,12 @@ h1, h2, h3 {
 }
 
 h1 a {
+  display: inline-block;
+  background: url(../images/me.png) no-repeat left center;
+  background-size: 80px;
+  height: 80px;
+  width: 80px;
+  text-indent: -10000em;
   text-decoration: none;
 }
 
