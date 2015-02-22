@@ -16,7 +16,7 @@ to help spread the knowledge of Python's awesomeness.  We maintain the
 [meetups](http://www.meetup.com/pythonph/) and organize an
 annual [conference](http://ph.pycon.org).
 
-I'm also a big fan of [Docker](docker.com) and help out organize
+I'm also a big fan of [Docker](docker.com). I help out organize
 [Docker Manila](http://www.meetup.com/Docker-Manila/) meetups.
 You'll also bump into me in [Manila.js](http://manilajs.com/) meetups.
 
