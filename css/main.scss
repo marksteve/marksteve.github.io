@@ -12,6 +12,10 @@ body {
   padding: 3em 1em;
 }
 
+a {
+  border-bottom: 1px solid $light-gray;
+}
+
 header {
   @include outer-container;
   h1 {
