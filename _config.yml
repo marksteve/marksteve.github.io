@@ -1,0 +1,11 @@
+# Site settings
+title: Mark Steve Samson
+email: hello@marksteve.com
+description: A guy in the internet
+baseurl: ""
+url: "http://marksteve.com"
+twitter_username: themarksteve
+github_username: marksteve
+
+# Build settings
+markdown: kramdown

@@ -1,0 +1,41 @@
+---
+---
+
+@charset "utf-8";
+
+@import "bourbon/bourbon";
+@import "base/grid-settings";
+@import "neat/neat";
+@import "base/base";
+
+body {
+  padding: 3em 0;
+}
+
+header {
+  @include outer-container;
+  h1 {
+    background: url(../images/logo.png) no-repeat center center;
+    background-size: 106px;
+    padding-bottom: 200px;
+    text-align: center;
+    text-indent: -10000em;
+  }
+}
+
+section {
+  @include outer-container;
+}
+
+.home {
+  @include span-columns(6);
+  @include shift(3);
+  h2 {
+    font-weight: normal;
+    font-size: 2em;
+    text-align: center;
+  }
+  p {
+    text-align: justify;
+  }
+}
