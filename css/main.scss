@@ -9,7 +9,7 @@
 @import "base/base";
 
 body {
-  padding: 3em 0;
+  padding: 3em 1em;
 }
 
 header {
@@ -28,8 +28,26 @@ section {
 }
 
 .home {
-  @include span-columns(6);
-  @include shift(3);
+  & {
+    @include span-columns(6);
+    @include shift(3);
+    @include omega;
+  }
+  @include media($large) {
+    @include span-columns(6);
+    @include shift(1);
+    @include omega;
+  }
+  @include media($medium) {
+    @include span-columns(4);
+    @include shift(0);
+    @include omega;
+  }
+  @include media($small) {
+    @include span-columns(2);
+    @include shift(0);
+    @include omega;
+  }
   h2 {
     font-weight: normal;
     font-size: 2em;
