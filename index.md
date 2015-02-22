@@ -24,7 +24,4 @@ In case you're interested in the other things I write about,
 you can find me [blogging](http://blog.marksteve.com)
 and [tweeting](http://twitter.com/themarksteve) every now and then.
 
-I'm also always [game](http://steamcommunity.com/id/hireyuki)
-for a round of Dota 2!
-
 </div>
