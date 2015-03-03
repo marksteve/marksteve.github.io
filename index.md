@@ -25,7 +25,7 @@ to help spread news of Python's awesomeness. We maintain the
 [meetups](http://www.meetup.com/pythonph/), and organize an
 annual [conference](http://ph.pycon.org).
 
-I help organize [Docker Manila](http://www.meetup.com/Docker-Manila/) meetups,
+I also help organize [Docker Manila](http://www.meetup.com/Docker-Manila/) meetups,
 and regularly show up to [Manila.js](http://manilajs.com/) events.
 
 </div>
