@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "browserify --extension=.jsx _jsx/main.jsx | uglify-js -mc > js/main.min.js",
+    "build": "browserify --extension=.jsx _jsx/main.jsx | uglifyjs -mc > js/main.min.js",
     "watch": "watchify --extension=.jsx _jsx/main.jsx -o js/main.min.js -v"
   },
   "repository": {
@@ -24,6 +24,7 @@
   "devDependencies": {
     "babelify": "^5.0.3",
     "browserify": "^9.0.3",
+    "uglify-js": "^2.4.16",
     "watchify": "^2.4.0"
   },
   "browserify": {
