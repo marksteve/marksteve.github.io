@@ -1,0 +1,34 @@
+{
+  "name": "marksteve.github.io",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "browserify --extension=.jsx _jsx/main.jsx | uglify-js -mc > js/main.min.js",
+    "watch": "watchify --extension=.jsx _jsx/main.jsx -o js/main.min.js -v"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/marksteve/marksteve.github.io.git"
+  },
+  "author": {
+    "name": "Mark Steve Samson",
+    "email": "hello@marksteve.com"
+  },
+  "dependencies": {
+    "github-api": "^0.10.3",
+    "react": "^0.12.2",
+    "velocity-animate": "^1.2.2"
+  },
+  "devDependencies": {
+    "babelify": "^5.0.3",
+    "browserify": "^9.0.3",
+    "watchify": "^2.4.0"
+  },
+  "browserify": {
+    "transform": [
+      "babelify"
+    ]
+  }
+}

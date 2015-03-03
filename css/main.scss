@@ -3,21 +3,29 @@
 
 @charset "utf-8";
 
-@import "bourbon/bourbon";
-@import "base/grid-settings";
-@import "neat/neat";
-@import "base/base";
-
 body {
+  font: 24px/1.5 nimbus-sans, sans-serif;
   padding: 3em 1em;
 }
 
+h2 {
+  font-weight: normal;
+  font-size: 2em;
+  text-align: center;
+  line-height: 1.2;
+}
+
+p {
+  text-align: justify;
+}
+
 a {
-  border-bottom: 1px solid $light-gray;
+  text-decoration: none;
+  border-bottom: 1px solid;
+  color: inherit;
 }
 
 header {
-  @include outer-container;
   h1 {
     background: url(../images/logo.png) no-repeat center center;
     background-size: 106px;
@@ -27,37 +35,73 @@ header {
   }
 }
 
-section {
-  @include outer-container;
+.text {
+  & {
+    max-width: 40em;
+    margin: 0 auto;
+  }
 }
 
-.home {
+#repos {
   & {
-    @include span-columns(6);
-    @include shift(3);
-    @include omega;
-  }
-  @include media($large) {
-    @include span-columns(6);
-    @include shift(1);
-    @include omega;
-  }
-  @include media($medium) {
-    @include span-columns(4);
-    @include shift(0);
-    @include omega;
-  }
-  @include media($small) {
-    @include span-columns(2);
-    @include shift(0);
-    @include omega;
+    background: #404040;
+    color: #ff9;
+    padding: 1em 1em 3em 1em;
+    margin: 5em 0;
+    text-align: center;
+    position: relative;
+    font-weight: 300;
   }
   h2 {
-    font-weight: normal;
-    font-size: 2em;
-    text-align: center;
+    font-weight: 300;
   }
-  p {
-    text-align: justify;
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .octicon-logo-github {
+    font-size: 1em;
+    vertical-align: text-bottom;
+  }
+}
+
+.repo {
+  & {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  a {
+    display: block;
+    width: 10em;
+    height: 10em;
+    border: 1px solid;
+    padding: 1em;
+    margin: 0.5em;
+    color: inherit;
+    text-decoration: none;
+  }
+  .desc {
+    font-size: 0.8em;
+    line-height: 1;
+  }
+  .stars {
+    position: relative;
+  }
+  .stars-count {
+    position: relative;
+    line-height: 4;
+    color: #404040;
+  }
+  .octicon-star {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    font-size: 4em;
+  }
+  &:hover {
+    .octicon-star {
+    }
   }
 }

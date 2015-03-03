@@ -5,6 +5,8 @@
     <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
     <script src="//use.typekit.net/juv4olr.js"></script>
     <script>try{Typekit.load();}catch(e){}</script>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.2/normalize.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/octicons/2.2.0/octicons.min.css">
     <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
     <link rel="shortcut icon" href="{{ "/favicon.ico" | prepend: site.baseurl }}">
   </head>
@@ -12,8 +14,6 @@
     <header>
       <h1>Mark Steve Samson</h1>
     </header>
-    <section>
     {{ content }}
-    </section>
   </body>
 </html>

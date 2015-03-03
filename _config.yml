@@ -6,6 +6,10 @@ baseurl: ""
 url: "http://marksteve.com"
 twitter_username: themarksteve
 github_username: marksteve
+exclude:
+  - CNAME
+  - package.json
+  - node_modules/
 
 # Build settings
 markdown: kramdown
