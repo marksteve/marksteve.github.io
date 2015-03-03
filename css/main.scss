@@ -4,7 +4,7 @@
 @charset "utf-8";
 
 body {
-  font: 24px/1.5 nimbus-sans, sans-serif;
+  font: 24px/1.5 franklin-gothic-urw, sans-serif;
   padding: 3em 1em;
 }
 
@@ -72,6 +72,7 @@ header {
     vertical-align: middle;
   }
   a {
+    background-color: #404040;
     display: block;
     width: 10em;
     height: 10em;
@@ -80,6 +81,11 @@ header {
     margin: 0.5em;
     color: inherit;
     text-decoration: none;
+    transition: all 0.2s ease-in-out;
+  }
+  &:hover a {
+    background-color: #ff9;
+    color: #404040;
   }
   .desc {
     font-size: 0.8em;
@@ -90,8 +96,9 @@ header {
   }
   .stars-count {
     position: relative;
-    line-height: 4;
+    line-height: 5;
     color: #404040;
+    font-size: 0.8em;
   }
   .octicon-star {
     position: absolute;
@@ -100,8 +107,16 @@ header {
     text-align: center;
     font-size: 4em;
   }
+  .stars-count, .octicon-star {
+    transition: all 0.2s ease-in-out;
+  }
   &:hover {
+    .stars-count {
+      color: #ff9;
+    }
     .octicon-star {
+      color: #404040;
+      transform: scale(1.2);
     }
   }
 }
