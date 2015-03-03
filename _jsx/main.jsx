@@ -4,10 +4,7 @@ var Velocity = require('velocity-animate')
 
 require('velocity-animate/velocity.ui')
 
-var github = new Github({
-  token: '267592a2313963aaf20a0e241db9ed3d7b1e6cdb',
-  auth: 'oauth',
-})
+var github = new Github()
 
 var Repos = React.createClass({
   getInitialState() {
