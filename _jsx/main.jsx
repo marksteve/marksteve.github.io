@@ -55,7 +55,7 @@ var Repos = React.createClass({
   renderRepo(repo) {
     return (
       <li key={repo.id} className="repo">
-        <a href={repo.url}>
+        <a href={repo.html_url}>
           <div className="stars">
             <div className="octicon octicon-star" />
             <span className="stars-count">
