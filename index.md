@@ -3,10 +3,9 @@ layout: default
 ---
 
 
-<section>
 <div class="text" markdown="1">
 
-## Hi! Nice to meet you.<br>You can call me Steve.
+## Hi! Nice to meet you.<br>My name is Steve.
 
 I'm a self-taught web developer and open source enthusiast who dreams of
 creating his own game someday. Right now, I work on various web projects
@@ -14,9 +13,7 @@ for [work](https://www.insynchq.com) and for
 [fun](https://github.com/marksteve).
 
 </div>
-</section>
 
-<section>
 <div class="text" markdown="1">
 
 I love [Python](http://python.org). My friends and I volunteer
@@ -29,9 +26,7 @@ I also help organize [Docker Manila](http://www.meetup.com/Docker-Manila/) meetu
 and regularly show up to [Manila.js](http://manilajs.com/) events.
 
 </div>
-</section>
 
-<section>
 <div class="text" markdown="1">
 
 If you're interested in the other things I write about,
@@ -39,7 +34,6 @@ you can find me [blogging](http://blog.marksteve.com)
 and [tweeting](http://twitter.com/themarksteve) every now and then.
 
 </div>
-</section>
 
 <div id="repos"></div>
 

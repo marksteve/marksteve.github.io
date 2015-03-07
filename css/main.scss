@@ -5,10 +5,11 @@
 
 body {
   font: 24px/1.5 franklin-gothic-urw, sans-serif;
-  padding: 1em;
+  color: #404040;
 }
 
 h2 {
+  font-family: jubilat, serif;
   font-weight: normal;
   font-size: 2em;
   text-align: center;
@@ -29,7 +30,11 @@ header {
   h1 {
     background: url(../images/logo.png) no-repeat center center;
     background-size: 106px;
-    padding-bottom: 200px;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 3px solid;
+    margin: 100px auto;
     text-align: center;
     text-indent: -10000em;
   }
@@ -39,6 +44,7 @@ header {
   & {
     max-width: 30em;
     margin: 0 auto;
+    padding: 0 1em;
   }
 }
 
@@ -46,7 +52,7 @@ header {
   & {
     background: #404040;
     color: #ff9;
-    padding: 1em 1em 3em 1em;
+    padding: 5em;
     margin-top: 10em;
     text-align: center;
     position: relative;
@@ -76,7 +82,7 @@ header {
     display: block;
     width: 10em;
     height: 10em;
-    border: 1px solid;
+    border: 3px solid;
     padding: 1em;
     margin: 0.5em;
     color: inherit;
