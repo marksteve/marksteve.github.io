@@ -4,11 +4,12 @@
 @charset "utf-8";
 
 body {
+  background: #302040;
   font: 24px/1.5 franklin-gothic-urw, sans-serif;
-  color: #404040;
+  color: #ff9;
 }
 
-h2 {
+h1 {
   font-family: jubilat, serif;
   font-weight: normal;
   font-size: 2em;
@@ -26,34 +27,28 @@ a {
   color: inherit;
 }
 
-header {
-  h1 {
-    background: url(../images/logo.png) no-repeat center center;
-    background-size: 106px;
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    border: 3px solid;
-    margin: 100px auto;
-    text-align: center;
-    text-indent: -10000em;
-  }
-}
-
-.text {
+.about {
   & {
+    background: url(../images/bg.jpg) no-repeat center top;
+    background-size: cover;
+    padding: 5em 0 10em;
+  }
+  .text {
     max-width: 30em;
     margin: 0 auto;
-    padding: 0 1em;
+    padding: 2em 4em;
+    background: rgba(48, 32, 64, 0.9);
+  }
+  .avatar {
+    text-align: center;
+    padding-top: 10em;
   }
 }
 
 #repos {
   & {
-    background: #404040;
-    color: #ff9;
+    background: #302040;
     padding: 5em;
-    margin-top: 10em;
     text-align: center;
     position: relative;
     font-weight: 300;
@@ -78,7 +73,6 @@ header {
     vertical-align: middle;
   }
   a {
-    background-color: #404040;
     display: block;
     width: 10em;
     height: 10em;
@@ -91,7 +85,7 @@ header {
   }
   &:hover a {
     background-color: #ff9;
-    color: #404040;
+    color: #302040;
   }
   .desc {
     font-size: 0.8em;
@@ -103,7 +97,7 @@ header {
   .stars-count {
     position: relative;
     line-height: 5;
-    color: #404040;
+    color: #302040;
     font-size: 0.8em;
   }
   .octicon-star {
@@ -121,7 +115,7 @@ header {
       color: #ff9;
     }
     .octicon-star {
-      color: #404040;
+      color: #302040;
       transform: scale(1.2);
     }
   }
