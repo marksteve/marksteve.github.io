@@ -7,6 +7,10 @@
   box-sizing: border-box;
 }
 
+html, body {
+  text-rendering: geometricPrecision;
+}
+
 body {
   background: #302040;
   font: 24px/1.5 franklin-gothic-urw, sans-serif;
