@@ -62,7 +62,9 @@ var Repos = React.createClass({
               {repo.stargazers_count}
             </span>
           </div>
-          {repo.name}
+          <span className="name">
+            {repo.name}
+          </span>
           <div className="desc">
             {repo.description}
           </div>

@@ -3,11 +3,17 @@ layout: default
 ---
 
 
+<header>
+  <h1>Hi! Nice to meet you.<br>My name is Steve.</h1>
+</header>
+
 <div class="about">
 
-<div class="text" markdown="1">
+<div class="avatar">
+  <img src="/images/logo.png" width="106">
+</div>
 
-# Hi! Nice to meet you.<br>My name is Steve.
+<div class="text" markdown="1">
 
 I'm a self-taught web developer and open source enthusiast who dreams of
 creating his own game someday. Right now, I work on various web projects
@@ -29,9 +35,6 @@ and [tweeting](http://twitter.com/themarksteve) every now and then.
 
 </div>
 
-<div class="avatar">
-  <img src="/images/logo.png" width="106">
-</div>
 
 </div>
 
