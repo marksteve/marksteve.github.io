@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "browserify --extension=.jsx _jsx/main.jsx | uglifyjs -mc > js/main.min.js",
-    "watch": "watchify --extension=.jsx _jsx/main.jsx -o js/main.min.js -v"
+    "build": "NODE_ENV=production browserify -t babelify -t envify --extension=.jsx _jsx/main.jsx | uglifyjs -mc > js/main.min.js",
+    "watch": "watchify -t babelify --extension=.jsx _jsx/main.jsx -o js/main.min.js -v"
   },
   "repository": {
     "type": "git",
@@ -17,19 +17,15 @@
     "email": "hello@marksteve.com"
   },
   "dependencies": {
-    "github-api": "^0.10.3",
     "react": "^0.12.2",
+    "superagent": "^1.4.0",
     "velocity-animate": "^1.2.2"
   },
   "devDependencies": {
     "babelify": "^5.0.3",
     "browserify": "^9.0.3",
+    "envify": "^3.4.0",
     "uglify-js": "^2.4.16",
     "watchify": "^2.4.0"
-  },
-  "browserify": {
-    "transform": [
-      "babelify"
-    ]
   }
 }

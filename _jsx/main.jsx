@@ -1,12 +1,10 @@
 var React = require('react')
-var Github = require('github-api')
+var superagent = require('superagent')
 var Velocity = require('velocity-animate')
 
 require('velocity-animate/velocity.ui')
 
-var github = new Github({
-  token: '9b84903a3ed3e6e8452ba6cd72cf8f1b72330c37'
-})
+var TOKEN = '9b84903a3ed3e6e8452ba6cd72cf8f1b72330c37'
 
 var Repos = React.createClass({
   getInitialState() {
@@ -15,13 +13,15 @@ var Repos = React.createClass({
     }
   },
   componentWillMount() {
-    let user = github.getUser()
-    user.userRepos('marksteve', (err, repos) => {
-      if (err) throw err
-      this.setState({
-        repos: repos,
+    superagent
+      .get('https://api.github.com/user/repos')
+      .set('Authorization', 'token ' + TOKEN)
+      .query({type: 'owner', sort: 'updated'})
+      .end((err, res) => {
+        if (res.ok) {
+          this.setState({repos: res.body})
+        }
       })
-    })
   },
   componentDidUpdate(prevProps, prevState) {
     if (prevState.repos.length !== this.state.repos.length) {

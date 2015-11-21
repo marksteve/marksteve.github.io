@@ -4,7 +4,8 @@ layout: default
 
 
 <header>
-  <h1>Hi! Nice to meet you.<br>My name is Steve.</h1>
+  <h1>Mark Steve Samson</h1>
+  <p>Web apps <span class="amp">&</span> Open source</p>
 </header>
 
 <div class="about">
@@ -17,7 +18,7 @@ layout: default
 
 I'm a self-taught web developer and open source enthusiast who dreams of
 creating his own game someday. Right now, I work on various web projects
-for [work](https://www.insynchq.com) and for
+for [work](https://blankhq.com) and for
 [fun](https://github.com/marksteve).
 
 I love [Python](http://python.org). My friends and I volunteer
