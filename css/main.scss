@@ -23,6 +23,21 @@ a {
   color: inherit;
 }
 
+h1, h2 {
+  font-family: jubilat, serif;
+  font-weight: normal;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 2rem 0 0;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
 header {
   & {
     height: 100vh;
@@ -32,13 +47,6 @@ header {
     color: white;
     text-align: center;
     line-height: 1;
-  }
-  h1 {
-    font-family: jubilat, serif;
-    font-weight: normal;
-    font-size: 3rem;
-    text-align: center;
-    margin: 2rem 0 0;
   }
   p {
     margin: 0;
@@ -69,12 +77,6 @@ header {
     max-width: 40rem;
     padding: 0 2rem;
     margin: 0 auto;
-  }
-  .text h2 {
-    font-family: jubilat, serif;
-    font-weight: normal;
-    font-size: 2rem;
-    text-align: center;
   }
   .text p {
     text-align: justify;
