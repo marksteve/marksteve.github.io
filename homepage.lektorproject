@@ -1,2 +1,5 @@
 [project]
 name = homepage
+
+[servers.ghpages]
+target = ghpages://marksteve/marksteve.github.io
