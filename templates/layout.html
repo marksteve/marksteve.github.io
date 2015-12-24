@@ -1,29 +1,21 @@
 <!doctype html>
-<meta charset="utf-8">
-<link rel="stylesheet" href="{{ '/static/style.css'|url }}">
-<title>{% block title %}Welcome{% endblock %} — homepage</title>
+<html>
+<head>
+  <meta charset="utf-8">
+  {% block css %}
+  <script src="//use.typekit.net/juv4olr.js"></script>
+  <script>try{Typekit.load();}catch(e){}</script>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.2/normalize.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/octicons/2.2.0/octicons.min.css">
+  <link rel="shortcut icon" href="{{ "/static/favicon.ico"|asseturl }}">
+  <link rel="stylesheet" href="{{ '/static/gen/styles.css'|asseturl }}">
+  {% endblock %}
+  {% block script %}
+  <script src="{{ '/static/gen/app.js'|asseturl }}"></script>
+  {% endblock %}
+  <title>{% block title %}{{ this.title }}{% endblock %}</title>
+</head>
 <body>
-  <header>
-    <h1>homepage</h1>
-    <nav>
-      <ul class="nav navbar-nav">
-        <li{% if this._path == '/' %} class="active"{% endif
-          %}><a href="{{ '/'|url }}">Welcome</a></li>
-        {% for href, title in [
-          ['/blog', 'Blog'],
-          ['/projects', 'Projects'],
-          ['/about', 'About']
-        ] %}
-          <li{% if this.is_child_of(href) %} class="active"{% endif
-            %}><a href="{{ href|url }}">{{ title }}</a></li>
-        {% endfor %}
-      </ul>
-    </nav>
-  </header>
-  <div class="page">
-    {% block body %}{% endblock %}
-  </div>
-  <footer>
-    &copy; Copyright 2015 by Mark Steve Samson.
-  </footer>
+  {% block body %}{% endblock %}
 </body>
+</html>

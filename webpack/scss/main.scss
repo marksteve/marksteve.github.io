@@ -1,0 +1,173 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  position: relative;
+  background: #302040;
+  font: 20px/1.5 franklin-gothic-urw, sans-serif;
+  color: #ff9;
+}
+
+a {
+  text-decoration: none;
+  border-bottom: 1px solid;
+  color: inherit;
+}
+
+h1, h2 {
+  font-family: jubilat, serif;
+  font-weight: normal;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 2rem 0 0;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+header {
+  & {
+    height: 100vh;
+    background: url(../images/bg.jpg) no-repeat center top;
+    background-size: cover;
+    padding: 3rem 1rem;
+    color: white;
+    text-align: center;
+    line-height: 1;
+  }
+  p {
+    margin: 0;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+  }
+  .amp {
+    font-family: jubilat, serif;
+    font-size: 2rem;
+    vertical-align: middle;
+  }
+}
+
+.about {
+  & {
+    background: rgba(37,29,53,0.5);
+    background: -moz-linear-gradient(top, rgba(37,29,53,0.5) 0%, rgba(37,29,53,1) 25%, rgba(48,32,64,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(37,29,53,0.5)), color-stop(25%, rgba(37,29,53,1)), color-stop(100%, rgba(48,32,64,1)));
+    background: -webkit-linear-gradient(top, rgba(37,29,53,0.5) 0%, rgba(37,29,53,1) 25%, rgba(48,32,64,1) 100%);
+    background: -o-linear-gradient(top, rgba(37,29,53,0.5) 0%, rgba(37,29,53,1) 25%, rgba(48,32,64,1) 100%);
+    background: -ms-linear-gradient(top, rgba(37,29,53,0.5) 0%, rgba(37,29,53,1) 25%, rgba(48,32,64,1) 100%);
+    background: linear-gradient(to bottom, rgba(37,29,53,0.5) 0%, rgba(37,29,53,1) 25%, rgba(48,32,64,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#251d35', endColorstr='#302040', GradientType=0 );   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#251d35', endColorstr='#302040', GradientType=0 );
+    margin-top: -12.5vh;
+  }
+  .text {
+    background: url(../images/logo.png) no-repeat center top;
+    background-size: 106px;
+    max-width: 40rem;
+    padding: 50vh 2rem 12.5vh;
+    margin: 0 auto;
+  }
+  .text p {
+    text-align: justify;
+  }
+}
+
+.repos {
+  & {
+    background: url(../images/gh-mark-bg.png) no-repeat center 3rem;
+    background-size: 80%;
+    padding: 0 5rem 10rem;
+    text-align: center;
+    position: relative;
+    font-weight: 300;
+  }
+  h2 {
+    font-weight: 300;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .octicon-logo-github {
+    vertical-align: text-bottom;
+  }
+}
+
+.repo {
+  & {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  a {
+    display: block;
+    width: 15rem;
+    height: 15rem;
+    border: 3px solid;
+    padding: 2rem;
+    margin: 0.5rem;
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    background-color: rgba(48, 32, 64, 0.8);
+  }
+  &:hover a {
+    background-color: #ff9;
+    color: #302040;
+  }
+  .stars {
+    display: block;
+    position: relative;
+  }
+  .stars-count {
+    position: relative;
+    line-height: 6rem;
+    color: #302040;
+  }
+  .octicon-star {
+    display: block;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    font-size: 6rem;
+  }
+  .stars-count, .octicon-star {
+    transition: all 0.2s ease-in-out;
+  }
+  &:hover {
+    .stars-count {
+      color: #ff9;
+    }
+    .octicon-star {
+      color: #302040;
+      transform: scale(1.5);
+    }
+  }
+  .name {
+    white-space: nowrap;
+  }
+  .desc {
+    font-size: 0.8rem;
+    line-height: 1;
+  }
+}
+
+footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font-size: small;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}

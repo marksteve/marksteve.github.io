@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+{% block body %}
+  <header>
+    <h1>Mark Steve Samson</h1>
+    <p>Web apps <span class="amp">&</span> Open source</p>
+  </header>
+  <div class="about">
+    <div class="text">
+      {{ this.body }}
+    </div>
+  </div>
+  <div class="repos">
+    <h2>Open Source Projects</h2>
+    <ul>
+    {% for repo in get_github_repos(type="owner", sort="updated") %}
+      <li class="repo">
+        <a href="{{ repo.html_url }}">
+          <div class="stars">
+            <div class="octicon octicon-star"></div>
+            <span class="stars-count">
+              {{ repo.stargazers_count }}
+            </span>
+          </div>
+          <span class="name">{{ repo.name }}</span>
+          <div class="desc">{{ repo.description }}</div>
+        </a>
+      </li>
+    {% endfor %}
+    </ul>
+  </div>
+  <footer>
+    Made with <a href="https://www.getlektor.com/">Lektor</a>
+    &mdash;
+    <a href="https://github.com/marksteve/marksteve.github.io">Source</a>
+  </footer>
+{% endblock %}
