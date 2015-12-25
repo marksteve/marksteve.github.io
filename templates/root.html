@@ -12,7 +12,7 @@
   <div class="repos">
     <h2>Open Source Projects</h2>
     <ul>
-    {% for repo in get_github_repos(type="owner", sort="updated") %}
+    {% for repo in get_top_github_repos(type="owner", sort="updated", count=10) %}
       <li class="repo">
         <a href="{{ repo.html_url }}">
           <div class="stars">

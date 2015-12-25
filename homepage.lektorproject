@@ -7,3 +7,4 @@ target = ghpages://marksteve/marksteve.github.io?cname=marksteve.com
 
 [packages]
 lektor-webpack-support = 0.1
+lektor-github-repos = 0.1.1
