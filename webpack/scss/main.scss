@@ -34,7 +34,9 @@ h2 {
   font-size: 2rem;
 }
 
-header {
+// Root
+
+.root header {
   & {
     height: 100vh;
     background: url(../images/bg.jpg) no-repeat center top;
@@ -57,7 +59,7 @@ header {
   }
 }
 
-.about {
+.root .about {
   & {
     background: rgba(37,29,53,0.5);
     background: -moz-linear-gradient(top, rgba(37,29,53,0.5) 0%, rgba(37,29,53,1) 25%, rgba(48,32,64,1) 100%);
@@ -81,7 +83,7 @@ header {
   }
 }
 
-.repos {
+.root .repos {
   & {
     background: url(../images/gh-mark-bg.png) no-repeat center 3rem;
     background-size: 80%;
@@ -103,7 +105,7 @@ header {
   }
 }
 
-.repo {
+.root .repo {
   & {
     display: inline-block;
     vertical-align: middle;
@@ -157,12 +159,12 @@ header {
     white-space: nowrap;
   }
   .desc {
-    font-size: 0.8rem;
+    font-size: small;
     line-height: 1;
   }
 }
 
-footer {
+.root footer {
   position: absolute;
   left: 0;
   right: 0;
@@ -170,4 +172,62 @@ footer {
   font-size: small;
   text-align: center;
   margin-bottom: 1.5rem;
+}
+
+// Blog
+
+.blog {
+  & {
+    width: 100%;
+    max-width: 40rem;
+    background: white;
+    padding: 3rem;
+    margin: 0 auto;
+    color: #302040;
+  }
+  .crumbs {
+    color: lighten(#302040, 75);
+    text-align: center;
+    line-height: 1;
+  }
+  .crumbs a {
+    color: #302040;
+    border-bottom: 0;
+  }
+  .post-title {
+    margin-bottom: 0;
+    line-height: 1;
+  }
+  .post-title a {
+    border-bottom: 0;
+  }
+  .pub-date {
+    font-size: small;
+    text-align: center;
+  }
+  .pagination {
+    margin-top: 3rem;
+    text-align: center;
+  }
+  .pagination .disabled {
+    color: lighten(#302040, 75);
+  }
+}
+
+.blog .post-body {
+  h1, h2 { font-size: 150%; }
+  h3 { font-size: 115%; }
+  h4 { font-size: 88%; }
+  h5 { font-size: 68%; }
+  img {
+    max-width: 100%;
+  }
+  pre {
+    background: lighten(#ff9, 15);
+    padding: 1rem;
+  }
+  code {
+    font-size: 80%;
+    line-height: 1;
+  }
 }

@@ -1,11 +1,14 @@
 {% extends "layout.html" %}
 {% from "macros/blog.html" import render_blog_post %}
 {% from "macros/pagination.html" import render_pagination %}
-{% block title %}{{ this.title }}{% endblock %}
 {% block body %}
-  {% for child in this.pagination.items %}
+<div class="blog">
+  <div class="crumbs">
+    <a href="{{ this.parent|url }}">Home</a> / Blog
+  </div>
+  {% for child in this.pagination.items.order_by('-pub_date') %}
     {{ render_blog_post(child, from_index=true) }}
   {% endfor %}
-
   {{ render_pagination(this.pagination) }}
+</div>
 {% endblock %}
