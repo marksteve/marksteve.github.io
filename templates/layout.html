@@ -1,8 +1,13 @@
 <!doctype html>
 <html>
 <head>
+  <title>{% block title %}{{ this.title }}{% endblock %}</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% block opengraph %}
+  <meta property="og:title" content="{{ this.title }}">
+  <meta property="{{ "/static/opengraph.jpg"|asseturl }}">
+  {% endblock %}
   {% block css %}
   <script src="//use.typekit.net/juv4olr.js"></script>
   <script>try{Typekit.load();}catch(e){}</script>
@@ -14,7 +19,6 @@
   {% block script %}
   <script src="{{ '/static/gen/app.js'|asseturl }}"></script>
   {% endblock %}
-  <title>{% block title %}{{ this.title }}{% endblock %}</title>
 </head>
 <body>
   {% block body %}{% endblock %}
