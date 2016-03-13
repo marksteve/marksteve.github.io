@@ -1,7 +1,11 @@
 {% extends "layout.html" %}
 
 {% block body %}
-<div class="about">
+<div class="backgrounds fill">
+  <video class="blankhq fill" autoplay="true" loop="true" src="http://imgur.com/zdFTUfG.webm"></video>
+  <img class="pythonph fill" src="{{ "/static/pythonph.jpg"|asseturl }}">
+</div>
+<div class="about fill">
   <h1>Mark <em>Steve</em> Samson</h1>
   <ul>
     <li class="gray">web apps &amp; open source</li>
@@ -15,11 +19,11 @@
     </li>
     </li>
     <li>
-      <a href="https://blankhq.com">blankhq.com</a>
+      <a target="_blank" href="https://blankhq.com" data-background="blankhq">blankhq.com</a>
       <span class="gray">cto</span>
     </li>
     <li>
-      <a href="https://python.ph">python.ph</a>
+      <a target="_blank" href="https://python.ph" data-background="pythonph">python.ph</a>
       <span class="gray">president</span>
     </li>
   </ul>

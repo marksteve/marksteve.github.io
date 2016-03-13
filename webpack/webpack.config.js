@@ -6,16 +6,16 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var options = {
   entry: {
     'app': './js/main.js',
-    'styles': './scss/main.scss'
+    'styles': './scss/main.scss',
   },
   output: {
     path: path.dirname(__dirname) + '/assets/static/gen',
-    filename: '[name].js'
+    filename: '[name].js',
   },
   devtool: '#cheap-module-source-map',
   resolve: {
     modulesDirectories: ['node_modules'],
-    extensions: ['', '.js']
+    extensions: ['', '.js'],
   },
   module: {
     loaders: [
@@ -35,16 +35,14 @@ var options = {
       {
         test: /\.(woff2?|ttf|eot|svg|jpg|png)(\?.*?)?$/,
         loader: 'file'
-      }
+      },
     ]
   },
   plugins: [
-    new ExtractTextPlugin('styles.css', {
-      allChunks: true
-    }),
     new webpack.optimize.UglifyJsPlugin(),
-    new webpack.optimize.DedupePlugin()
-  ]
+    new webpack.optimize.DedupePlugin(),
+    new ExtractTextPlugin('styles.css', {allChunks: true}),
+  ],
 };
 
 module.exports = options;
