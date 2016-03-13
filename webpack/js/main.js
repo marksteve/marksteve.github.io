@@ -8,7 +8,7 @@ $$('[data-background]').forEach(function(el) {
     'mouseover': function() {
       background._.style({display: 'block', opacity: 0})
       setTimeout(function() {
-        background._.transition({opacity: 0.1})
+        background._.transition({opacity: 0.05})
       })
     },
     'mouseout': function() {
