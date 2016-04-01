@@ -1,26 +1,29 @@
 {% extends "layout.html" %}
 
 {% block body %}
-<div class="backgrounds fill">
-  <video class="blankhq fill" autoplay="true" loop="true" src="http://imgur.com/zdFTUfG.webm"></video>
-  <img class="pythonph fill" src="{{ "/static/pythonph.jpg"|asseturl }}">
+<div class="logo fill">
+  <div class="backgrounds">
+    <video class="blankhq fill" autoplay="true" loop="true" src="http://imgur.com/zdFTUfG.webm"></video>
+    <img class="pythonph fill" src="{{ "/static/pythonph.jpg"|asseturl }}">
+  </div>
+  <img src="{{ "/static/logo-light.svg"|asseturl }}">
 </div>
 <div class="about fill">
   <h1>Mark <em>Steve</em> Samson</h1>
   <ul>
-    <li class="gray">web apps &amp; open source</li>
+    <li class="gray">&mdash; web apps &amp; open source,</li>
     </li>
     <li>
       <a target="_blank" href="https://blankhq.com" data-background="blankhq">blankhq.com</a>
-      <span class="gray">cto</span>
+      <span class="gray">cto,</span>
     </li>
     <li>
       <a target="_blank" href="https://python.ph" data-background="pythonph">python.ph</a>
-      <span class="gray">president</span>
+      <span class="gray">president.</span>
     </li>
-    <li>Steve <span class="gray">irl</span></li>
     <li>
-      marksteve <span class="gray">online</span>
+      <span class="gray">I'm</span> marksteve
+      <span class="gray">online:</span>
       <ul>
         <li><a href="https://github.com/marksteve">github</a></li>
         <li><a href="https://twitter.com/marksteve">twitter</a></li>

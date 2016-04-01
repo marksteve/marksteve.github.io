@@ -7,7 +7,7 @@
 body {
   margin: 0;
   padding: 0;
-  background: #111;
+  background: black;
   color: white;
   font: 60px/1 aileronblack, sans-serif;
 }
@@ -33,10 +33,17 @@ a:hover {
 }
 
 .backgrounds {
+  & {
+    background: white;
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    right: 0;
+  }
   > * {
     display: none;
   }
-  img {
+  > img {
     object-fit: cover;
     overflow: hidden;
   }
@@ -59,6 +66,16 @@ a:hover {
   }
   li > ul {
     padding-left: 1em;
+  }
+}
+
+.logo {
+  & {
+    text-align: right;
+  }
+  > img {
+    width: 100vh;
+    position: relative;
   }
 }
 
