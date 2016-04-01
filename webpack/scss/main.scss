@@ -32,20 +32,29 @@ a:hover {
   height: 100%;
 }
 
+.logo {
+  & {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    overflow: hidden;
+  }
+  > img {
+    height: 100%;
+    position: relative;
+  }
+}
+
 .backgrounds {
   & {
     background: white;
-    position: absolute;
-    width: 50%;
-    height: 100%;
-    right: 0;
   }
   > * {
-    display: none;
-  }
-  > img {
+    opacity: 0;
+    height: 100%;
     object-fit: cover;
-    overflow: hidden;
   }
 }
 
@@ -66,16 +75,6 @@ a:hover {
   }
   li > ul {
     padding-left: 1em;
-  }
-}
-
-.logo {
-  & {
-    text-align: right;
-  }
-  > img {
-    width: 100vh;
-    position: relative;
   }
 }
 
