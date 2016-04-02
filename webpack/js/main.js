@@ -3,16 +3,13 @@ import tinycolor from 'tinycolor2'
 
 let accentColor, backgrounds = $('.backgrounds')
 
-$$('[data-background]').forEach(function(el) {
-  let background = $('.' + el.dataset.background, backgrounds)
+$$('a').forEach(function(el) {
   el._.events({
     'mouseenter': function() {
-      el._.transition({color: accentColor})
-      background._.transition({opacity: 0.5})
+      el._.style({color: accentColor})
     },
     'mouseleave': function() {
-      el._.transition({color: 'white'})
-      background._.transition({opacity: 0})
+      el._.style({color: 'white'})
     },
   })
 })
@@ -26,3 +23,15 @@ function setColor(e) {
 }
 
 document.addEventListener('mousemove', setColor)
+
+$$('[data-background]').forEach(function(el) {
+  let background = $('.' + el.dataset.background, backgrounds)
+  el._.events({
+    'mouseenter': function() {
+      background._.transition({opacity: 0.5})
+    },
+    'mouseleave': function() {
+      background._.transition({opacity: 0})
+    },
+  })
+})
