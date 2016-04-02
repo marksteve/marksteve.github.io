@@ -17,8 +17,12 @@ $$('[data-background]').forEach(function(el) {
   })
 })
 
-function randomColor() {
-  accentColor = tinycolor.random().toHexString()
+function setColor(e) {
+  let r = e.clientX / window.innerWidth
+  let g = e.clientY / window.innerHeight
+  let b = r / (r + g)
+  accentColor = tinycolor.fromRatio({r, g, b})
   backgrounds._.style({backgroundColor: accentColor})
 }
-setInterval(randomColor, 500)
+
+document.addEventListener('mousemove', setColor)
