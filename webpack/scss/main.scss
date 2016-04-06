@@ -5,11 +5,12 @@
 }
 
 body {
+  font: calc(20px + 2.5vw)/1 aileronblack, sans-serif;
+  color: white;
   margin: 0;
   padding: 0;
   background: black;
-  color: white;
-  font: calc(20px + 2.5vw)/1 aileronblack, sans-serif;
+  overflow-x: hidden;
 }
 
 a {
@@ -31,9 +32,9 @@ a {
   & {
     background: white;
     transition: background-color ease-in-out 0.2s;
+    border: 1px black solid;  // rendering issues
   }
   > * {
-    height: 100%;
     opacity: 0;
     object-fit: cover;
   }
@@ -79,9 +80,6 @@ footer {
       top: 0;
     }
   }
-  .backgrounds {
-    border: 1px black solid;  // rendering issues
-  }
   .fill {
     position: absolute;
     top: 0;
@@ -101,10 +99,12 @@ footer {
     & {
       position: absolute;
       width: 100%;
-      padding-bottom: 100%;
+      padding-bottom: calc(100% - 2px);
     }
     > * {
       position: absolute;
+      top: 0;
+      left: 0;
     }
   }
   .about, footer {
