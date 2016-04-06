@@ -14,7 +14,7 @@ body {
 }
 
 a {
-  color: white;
+  color: inherit;
   transition: color ease-in-out 0.5s;
 }
 
@@ -99,12 +99,10 @@ footer {
     & {
       position: absolute;
       width: 100%;
-      padding-bottom: calc(100% - 2px);
+      padding-bottom: calc(100% - 4px);  // rendering issues
     }
     > * {
-      position: absolute;
-      top: 0;
-      left: 0;
+      display: none;
     }
   }
   .about, footer {
