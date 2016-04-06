@@ -9,7 +9,7 @@ body {
   padding: 0;
   background: black;
   color: white;
-  font: 4vw/1 aileronblack, sans-serif;
+  font: calc(20px + 2.5vw)/1 aileronblack, sans-serif;
 }
 
 a {
@@ -21,25 +21,8 @@ a {
   color: #333;
 }
 
-.fill {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
 .logo {
-  & {
-    width: 50%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    right: 0;
-    overflow: hidden;
-  }
   > img {
-    height: 100%;
     position: relative;
   }
 }
@@ -50,14 +33,16 @@ a {
     transition: background-color ease-in-out 0.2s;
   }
   > * {
-    opacity: 0;
     height: 100%;
+    opacity: 0;
     object-fit: cover;
   }
 }
 
 .about {
-  padding: 1em;
+  & {
+    padding: 3rem;
+  }
   a {
     text-decoration: none;
   }
@@ -69,17 +54,60 @@ a {
   ul {
     list-style: none;
     padding: 0;
-    margin: 0 0 1.5em;
-  }
-  li > ul {
-    padding-left: 1em;
+    margin: 0 0 1.5rem;
   }
 }
 
 footer {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  padding: 1rem;
-  font-size: 20px;
+  padding: 3rem;
+  font-size: 40%;
+}
+
+@media (min-width: 800px) {
+  .logo {
+    & {
+      width: 50%;
+      padding-bottom: 50%;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+    > img {
+      width: 100%;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
+  .backgrounds {
+    border: 1px black solid;  // rendering issues
+  }
+  .fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+@media (max-width: 800px) {
+  .backgrounds {
+    & {
+      position: absolute;
+      width: 100%;
+      padding-bottom: 100%;
+    }
+    > * {
+      position: absolute;
+    }
+  }
+  .about, footer {
+    text-align: center;
+  }
 }
