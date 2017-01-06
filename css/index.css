@@ -4,7 +4,7 @@ body {
   background: url(../images/logo-outline.svg) no-repeat center top;
   font: calc(14px + 1vw)/1.5 Rubik, sans-serif;
   margin: 0;
-  padding: 0 3rem;
+  padding: 3rem;
 }
 
 h1, h2, h3, h4, p, blockquote, code, ul, ol {
@@ -25,7 +25,7 @@ a { color: inherit; }
   box-sizing: border-box;
   max-width: 40rem;
   min-height: 100vh;
-  margin: 3rem auto;
+  margin: 0 auto;
 }
 
 .page > footer {
