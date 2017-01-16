@@ -20,12 +20,6 @@ h4 { font-size: 1.225em; }
 small {font-size: 0.816em;}
 a { color: inherit; }
 
-.page {
-  box-sizing: border-box;
-  min-height: 100vh;
-  margin: 3rem 0;
-}
-
 .page > footer {
   margin-top: 3rem;
 }
