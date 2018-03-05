@@ -1,7 +1,5 @@
 body {
-  background: url(../images/logo-outline.svg) repeat-y right;
-  background-size: 6rem;
-  font: calc(14px + 1vw)/1.5 overpass-mono, monospace;
+  font: calc(10px + 0.25vw)/1.5 overpass-mono, monospace;
   margin: 0;
   padding: 3rem;
 }
