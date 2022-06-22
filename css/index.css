@@ -1,32 +1,106 @@
-body {
-  font: calc(10px + 0.25vw)/1.5 overpass-mono, monospace;
-  margin: 0;
-  padding: 3rem;
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Varela&display=swap');
+
+* {
+  box-sizing: border-box;
 }
 
-h1, h2, h3, h4, p, blockquote, code, ul, ol {
+body {
+  background: #021;
+  font: calc(12px + 0.25vw) / 1.5 Varela, sans-serif;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: relative;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+blockquote,
+code,
+ul,
+ol {
   margin: 0 0 1.5rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+h1,
+h2 {
+  font-family: "Permanent Marker";
 }
 
 h1 {
   margin-top: 0;
   font-size: 2.252em;
 }
-h2 { font-size: 1.838em; }
-h3 { font-size: 1.501em; }
-h4 { font-size: 1.225em; }
-small {font-size: 0.816em;}
-a { color: inherit; }
+h2 {
+  font-size: 1.838em;
+}
+h3 {
+  font-size: 1.501em;
+}
+h4 {
+  font-size: 1.225em;
+}
+small {
+  font-size: 0.816em;
+}
+a {
+  color: inherit;
+}
 
-.page > footer {
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.background > img {
+  width: 100%;
+  object-position: center top;
+  object-fit: cover;
+}
+
+section {
+  position: relative;
+  width: 100%;
+  max-width: 50vw;
+  padding: 3rem;
+}
+
+section:first-of-type {
+  color: #021;
+  min-height: 100vh;
+}
+
+section > img {
+  width: 100%;
+}
+
+section > footer {
   margin-top: 3rem;
 }
 
-@media (max-width: 600px) {
-  body {
-    background-repeat: no-repeat;
-    background-position: center bottom;
-    background-size: 10rem;
-    padding-bottom: 10rem;
+section.white {
+  color: white;
+}
+
+@media (max-width: 800px) {
+  section {
+    color: white !important;
+    max-width: 100%;
+  }
+  .background > img {
+    height: 100%;
+    filter: brightness(0.6);
   }
 }
