@@ -1,15 +1,120 @@
 ---
+import BgImage from "../components/BgImage";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<style>
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: Syne, sans-serif;
+    font-size: 10vw;
+    margin: 0;
+  }
+  h1 {
+    font-size: 1rem;
+    color: white;
+    padding: 2vw;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 1;
+  }
+  section {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  .bg section :global(img) {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .bg .code img {
+    object-position: center 65%;
+  }
+  .bg .climb img {
+    object-position: center 30%;
+  }
+  .bg .carpentry img {
+    object-position: center 70%;
+  }
+  .fg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    mix-blend-mode: multiply;
+  }
+  .fg section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    background: #024;
+    color: white;
+    opacity: 0.8;
+  }
+  .fg .code {
+    font-variation-settings: "wght" 800;
+  }
+  .fg .climb {
+    font-variation-settings: "wght" 780;
+  }
+  .fg .carpentry {
+    font-size: 80%;
+    font-variation-settings: "wght" 540;
+  }
+  .fg a {
+    cursor: pointer;
+    transition: font-variation-settings 0.2s ease-in-out;
+    text-align: center;
+  }
+  .fg .code a:hover {
+    font-variation-settings: "wght" 760;
+  }
+  .fg .climb a:hover {
+    font-variation-settings: "wght" 741;
+  }
+  .fg .carpentry a:hover {
+    font-variation-settings: "wght" 513;
+  }
+</style>
+
+<meta charset="utf-8" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Syne:wght@540;780;800&display=swap"
+  rel="stylesheet"
+/>
+<meta name="viewport" content="width=device-width" />
+<meta name="generator" content={Astro.generator} />
+<title>@marksteve</title>
+
+<body>
+  <div class="bg">
+    <BgImage client:load className="code" src="/code.jpg" range={[0.4, 0.7]} />
+    <BgImage
+      client:load
+      className="climbing"
+      src="/climb.jpg"
+      range={[0, 0.3]}
+    />
+    <BgImage
+      client:load
+      className="carpentry"
+      src="/carpentry.jpg"
+      range={[0.7, 1]}
+    />
+  </div>
+  <div class="fg">
+    <h1>@marksteve</h1>
+    <section class="code"><a>CODE</a></section>
+    <section class="climb"><a>CLIMB</a></section>
+    <section class="carpentry"><a>CARPENTRY</a></section>
+  </div>
+</body>
