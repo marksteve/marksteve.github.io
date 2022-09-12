@@ -27,7 +27,7 @@ export default function BgImage({ className, src, range }: BgImageProps) {
   const y = useParallax(scrollYProgress, range);
   return (
     <section className={className}>
-      <motion.img src={src} style={{ objectPosition: `0 ${y * 100}%` }} />;
+      <motion.img src={src} style={{ objectPosition: `0 ${y * 100}%` }} />
     </section>
   );
 }
